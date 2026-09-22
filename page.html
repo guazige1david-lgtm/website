@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web 终端模拟器</title>
+  <link rel="stylesheet" href="color.css">
+</head>
+<body>
+  <div class="terminal" id="terminal">
+    <div class="terminal-header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="title" id="terminal-title">bash — 80x24</span>
+    </div>
+    <div class="terminal-body" id="terminal-body">
+      <div class="terminal-output" id="terminal-output"></div>
+      <div class="terminal-input-line" id="input-line">
+        <span class="prompt" id="prompt"></span>
+        <span class="typed" id="typed-text"></span><span class="cursor" id="cursor">_</span>
+      </div>
+    </div>
+  </div>
+  <script src="core.js"></script>
+</body>
+</html>
