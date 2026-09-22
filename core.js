@@ -10,32 +10,12 @@
   // ---------- 虚拟文件系统 ----------
   // 目录: { type: 'dir', children: {...} }
   // 文件: { type: 'file', content: '...' }
-  const root = {
-    type: 'dir',
-    children: {
-      home: {
-        type: 'dir',
-        children: {
-          user: {
-            type: 'dir',
-            children: {
-              'readme.txt': {
-                type: 'file',
-                content: '欢迎使用我的 Web 终端模拟器！\n输入 help 查看可用命令。'
-              },
-              projects: { type: 'dir', children: {} }
-            }
-          }
-        }
-      },
-      etc: {
-        type: 'dir',
-        children: {
-          hostname: { type: 'file', content: 'web-terminal' }
-        }
-      }
-    }
-  };
+  //
+  // 内容不再写死在这里：
+  //   fs-data.js     扁平路径表（想改文件系统只需要改这个文件）
+  //   fs-builder.js  启动时把它展开成下面这棵树
+  // 只要展开结果还是上面的结构，下面的命令就一行都不用改。
+  const root = window.VFS.buildTree(window.FS_DATA || {});
 
   let cwd = '/home/user';           // 当前工作目录
   const history = [];               // 命令历史
