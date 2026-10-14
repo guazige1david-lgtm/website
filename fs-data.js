@@ -25,6 +25,11 @@ window.FS_DATA = {
     '希望你喜欢这个项目！'
   ],
 
+  // 目录 /home/user/bla 由这条路径自动创建
+  '/home/user/bla/DeepSeek_and_RSI.txt': [
+    'Deepseek 不会是真的在搞 RSI 了吧， 招 agent 工程师然后辅助ai 研究员？'
+  ],
+
   // 单行文件也可以直接写字符串
   '/etc/hostname': 'web-terminal'
 };
